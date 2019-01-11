@@ -1,32 +1,185 @@
-.App {
-  text-align: center;
+.current-area {
+    background-color: #2acd58;
+    color: #fff;
+    padding: 50px 100px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.navbar {
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar div {
+    flex: 1 1 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.input.search {
+    width: 100%;
+    border: solid 3px #1cb346;
+    padding: 15px;
+    font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.current-details {
+    display: flex;
+    padding: 90px 0;
+}
+
+.current-details div {
+    flex: 1 1 50%;
+}
+
+.current-salaat {}
+
+.current-details div p {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1px;
+    margin-left: 2px;
+}
+
+.current-details div h2 {
+    font-weight: 900;
+    font-size: 72px;
+}
+
+.current-info {
+    display: flex;
+}
+
+.current-info .current {
+    flex: 1 1 calc(100%/3);
+    padding: 40px;
+    background: #2acd58;
+    color: #fff;
+}
+
+.current.location {
+    background: #3fd268;
+}
+
+.current.started {
+    background: #53d678;
+}
+
+.current.will-end {
+    background: #5de484;
+}
+
+.current p {
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-left: 2px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.current h4 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.next-area {
+    padding: 100px;
+    color: #333;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title h3 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 28px;
+    display: inline-block;
+}
+
+.section-title h3:after {
+    position: absolute;
+    content: "";
+    width: 75%;
+    left: 0;
+    bottom: -10px;
+    height: 4px;
+    background: #2acd58;
+}
+
+.prayers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.prayers .prayer {
+    flex: 0 1 calc(100%/3);
+    padding: 40px 0;
+}
+
+.prayers .prayer h4 {
+    font-size: 42px;
+}
+
+.prayers .prayer p {
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.prayers .prayer.done {
+    position: relative;
+}
+
+.prayers .prayer.done h4 {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.prayers .prayer.done p {
+    background: #2acd58;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.footer-area {
+    display: flex;
+    align-items: center;
+    background: #f7f9fb;
+}
+
+.footer {
+    padding: 40px;
+}
+
+.footer.hadis {
+    background: #ECEFF1;
+    flex: 2;
+}
+
+.footer.hadis blockquote {
+  font-weight: 300;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.footer.credit {
+    flex: 1;
+}
+
+.footer.credit p {
+    text-transform: uppercase;
+}
+
+.footer.credit p strong {
+    color: #F44336;
+}
+
+.footer.credit p a {
+    background: #2acd58;
+    text-decoration: none;
+    color: #fff;
+    padding: 3px 7px;
+    margin-left: 5px;
+    border-radius: 4px;
+    font-weight: 900;
 }
