@@ -20,44 +20,79 @@ export const getCurrent = (today, tomorrow) => {
   })
   let startActual, endActual, start, end, hourDiff, minutesDiff;
   const timeDiff = new Date();
-  // Object.keys(todayMS).map(prayer => {
   for(let prayer in todayMS) {
     if(prayer === 'Fajr' && timeNow >= todayMS[prayer].time && timeNow < todayMS['Sunrise'].time) {
-      start = amPm(`${(new Date(todayMS[prayer].time).getHours())}:${(new Date(todayMS[prayer].time).getMinutes())}`);
-      end = new Date(todayMS['Sunrise'].time);
+      startActual = todayMS[prayer].time;
+      endActual = todayMS['Sunrise'].time;
+      start = new Date(startActual);
+      hourDiff = 24 - new Date(timeNow).getHours();
+      start = amPm(`${(start.getHours())}:${(start.getMinutes())}`);
+      end = new Date(endActual);
+      hourDiff += end.getHours();
+      minutesDiff = end.getMinutes() - new Date(timeNow).getMinutes();
       end = amPm(`${end.getHours()}:${end.getMinutes()}`);
+      timeDiff.setHours(hourDiff);
+      timeDiff.setMinutes(minutesDiff);
       currentPrayer =  {
         prayer,
+        timeDiff,
         start,
         end
       }
       break;
     } else if(prayer === 'Dhuhr' && timeNow >= todayMS[prayer].time && timeNow < todayMS['Asr'].time) {
-      start = amPm(`${(new Date(todayMS[prayer].time).getHours())}:${(new Date(todayMS[prayer].time).getMinutes())}`);
-      end = new Date(todayMS['Asr'].time);
+      startActual = todayMS[prayer].time;
+      endActual = todayMS['Asr'].time;
+      start = new Date(startActual);
+      hourDiff = 24 - new Date(timeNow).getHours();
+      start = amPm(`${(start.getHours())}:${(start.getMinutes())}`);
+      end = new Date(endActual);
+      hourDiff += end.getHours();
+      minutesDiff = end.getMinutes() - new Date(timeNow).getMinutes();
       end = amPm(`${end.getHours()}:${end.getMinutes()}`);
+      timeDiff.setHours(hourDiff);
+      timeDiff.setMinutes(minutesDiff);
       currentPrayer =  {
         prayer,
+        timeDiff,
         start,
         end
       }
       break;
     } else if(prayer === 'Asr' && timeNow >= todayMS[prayer].time && timeNow < todayMS['Sunset'].time) {
-      start = amPm(`${(new Date(todayMS[prayer].time).getHours())}:${(new Date(todayMS[prayer].time).getMinutes())}`);
-      end = new Date(todayMS['Sunset'].time);
+      startActual = todayMS[prayer].time;
+      endActual = todayMS['Sunset'].time;
+      start = new Date(startActual);
+      hourDiff = 24 - new Date(timeNow).getHours();
+      start = amPm(`${(start.getHours())}:${(start.getMinutes())}`);
+      end = new Date(endActual);
+      hourDiff += end.getHours();
+      minutesDiff = end.getMinutes() - new Date(timeNow).getMinutes();
       end = amPm(`${end.getHours()}:${end.getMinutes()}`);
+      timeDiff.setHours(hourDiff);
+      timeDiff.setMinutes(minutesDiff);
       currentPrayer =  {
         prayer,
+        timeDiff,
         start,
         end
       }
       break;
     } else if(prayer === 'Maghrib' && timeNow >= todayMS[prayer].time && timeNow < todayMS['Isha'].time) {
-      start = amPm(`${(new Date(todayMS[prayer].time).getHours())}:${(new Date(todayMS[prayer].time).getMinutes())}`);
-      end = new Date(todayMS['Isha'].time);
+      startActual = todayMS[prayer].time;
+      endActual = todayMS['Isha'].time;
+      start = new Date(startActual);
+      hourDiff = 24 - new Date(timeNow).getHours();
+      start = amPm(`${(start.getHours())}:${(start.getMinutes())}`);
+      end = new Date(endActual);
+      hourDiff += end.getHours();
+      minutesDiff = end.getMinutes() - new Date(timeNow).getMinutes();
       end = amPm(`${end.getHours()}:${end.getMinutes()}`);
+      timeDiff.setHours(hourDiff);
+      timeDiff.setMinutes(minutesDiff);
       currentPrayer =  {
         prayer,
+        timeDiff,
         start,
         end
       }
