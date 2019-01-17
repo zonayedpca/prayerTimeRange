@@ -23,8 +23,8 @@ class App extends Component {
   getLocation = () => {
     navigator.geolocation.getCurrentPosition(async({coords: { latitude, longitude }, timestamp }) => {
       const time = (Math.floor(timestamp/1000));
-      let { data: { data } } = await axios.get(`http://api.aladhan.com/v1/timings/${time}?latitude=${latitude}&longitude=${longitude}`);
-      let { data: { data: nextData } } = await axios.get(`http://api.aladhan.com/v1/timings/${(time + (24 * 60 * 60))}?latitude=${latitude}&longitude=${longitude}`);
+      let { data: { data } } = await axios.get(`//api.aladhan.com/v1/timings/${time}?latitude=${latitude}&longitude=${longitude}`);
+      let { data: { data: nextData } } = await axios.get(`//api.aladhan.com/v1/timings/${(time + (24 * 60 * 60))}?latitude=${latitude}&longitude=${longitude}`);
       data = data.timings;
       nextData = nextData.timings;
       const prayers = {
