@@ -1,5 +1,6 @@
 {
   "name": "prayer-time-range",
+  "homepage": "https://zonayedpca.github.io/prayerTimeRange",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
