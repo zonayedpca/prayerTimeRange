@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/prayerTimeRange/precache-manifest.d81327ab0a41450160c9e0aa02104939.js"
+  "/prayerTimeRange/precache-manifest.22e491b19079fbfb17323e302c041d0c.js"
 );
 
 workbox.clientsClaim();
