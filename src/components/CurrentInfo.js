@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default () =>
+export default ({ currentPrayer: { prayer, start, end } }) =>
   <div className="current-info">
     <div className="current location">
       <p>Location</p>
@@ -8,10 +8,10 @@ export default () =>
     </div>
     <div className="current started">
       <p>Started</p>
-      <h4>00:00</h4>
+      <h4>{start}</h4>
     </div>
     <div className="current will-end">
       <p>Will End</p>
-      <h4>00:00</h4>
+      <h4>{end}</h4>
     </div>
   </div>

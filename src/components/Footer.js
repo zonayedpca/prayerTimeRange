@@ -7,7 +7,7 @@ export default () =>
       </div>
       <div className="footer credit">
         <p>With <strong>❤</strong> By
-          <a href="#">Zonayed Ahmed</a>
+          <a href="https://zonayed.me">Zonayed Ahmed</a>
         </p>
       </div>
     </div>

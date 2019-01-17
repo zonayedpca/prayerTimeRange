@@ -109,6 +109,10 @@
     flex-wrap: wrap;
 }
 
+.prayers h4 {
+  flex-basis: 100%;
+}
+
 .prayers .prayer {
     flex: 0 1 calc(100%/3);
     padding: 40px 0;
