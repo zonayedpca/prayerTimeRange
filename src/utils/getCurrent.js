@@ -118,9 +118,10 @@ export const getCurrent = (today, tomorrow) => {
       break;
     } else {
       currentPrayer =  {
-        prayer: '00:00',
-        start: '00:00',
-        end: '00:00'
+        prayer: null,
+        timeDiff: null,
+        start: null,
+        end: null
       }
     }
   }

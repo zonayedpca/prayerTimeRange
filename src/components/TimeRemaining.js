@@ -17,7 +17,7 @@ class TimeRemaining extends Component {
   render() {
     const { timeDiff } = this.state;
     return (
-      <h2>{preZero(timeDiff.getHours())}:{preZero(timeDiff.getMinutes())}</h2>
+      <h2>{preZero(timeDiff.getHours())}:{timeDiff && preZero(timeDiff.getMinutes())}</h2>
     )
   }
 }
